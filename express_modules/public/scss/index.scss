@@ -1,0 +1,64 @@
+$color1: rgba(203, 27, 69, 0.98);
+$color1_hover: rgb(180, 24, 61);
+$color2: rgb(231, 103, 46);
+$color3: rgb(88, 178, 220);
+$color4: rgb(102, 186, 183);
+$color5: rgb(241, 124, 103);
+$color6: rgb(202, 122, 44);
+$color7: rgb(134, 193, 102);
+$color8: rgb(93, 172, 129);
+$color9: rgb(225, 107, 140);
+$color10: rgb(135, 135, 135);
+$color11: rgb(255, 170, 204);
+
+@mixin basicbox($width, $height, $margin, $padding) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+}
+body, html {
+  @include basicbox(100%, 100%, 0, 0);
+}
+ul, li {
+  list-style-type: none;
+}
+.page-head-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include basicbox(100%, 50px, 0, 0);
+  background: $color1;
+  box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.45);
+}
+.page-head-bar-container {
+  @include basicbox(80%, 100%, 0 auto, 0);
+  border: 1px solid #000;
+}
+.bar-left {
+  float: left;
+  @include basicbox(30%, 100%, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+.bar-right {
+  float: right;
+  @include basicbox(60%, 100%, 0, 0);
+  border: 1px solid #000;
+}
+.bar-left-logo {
+  @include basicbox(160px, 50px, 0, 0);
+  line-height: 50px;
+  img {
+    @include basicbox(100%, 30px, 10px 0);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:nth-child(2), &:nth-child(3) {
+    @include basicbox(auto, 50px, 0, 0);
+    line-height: 50px;
+    border: 1px solid #000;
+  }
+}

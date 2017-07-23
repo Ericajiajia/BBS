@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>BBS</title>
+    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="stylesheet" href="./font/css/font-awesome.css">
+</head>
+<!-- GitGutter插件很卡，已卸载 -->
+<body>
+<!-- 头部悬浮栏 -->
+<div class="page-head-bar">
+  <div class="page-head-bar-container">
+    <!-- 左侧链接区 -->
+    <div class="bar-left">
+      <!-- 网页logo -->
+      <div class="bar-left-logo">
+        <img src="./img/head_bar_logo.png" alt="logo">
+      </div>
+      <div class="bar-left-block1">关于</div>
+      <div class="bar-left-block2">版本</div>
+    </div>
+    <!-- 右侧链接区 -->
+    <div class="bar-right">
+      <!-- 搜索栏 -->
+      <div class="bar-right-search-container">
+        <div class="search-bar-container">
+          <i class="fa fa-search fa-2x"></i>
+          <input type="text" class="search-input" placeholder="搜索" spellcheck="false">          
+        </div>
+      </div>
+      <!-- 语言区 -->
+      <div class="bar-right-language">
+        <!-- 默认语言和箭头图标 -->
+        <div class="language-default-bar">
+          <div class="languege-default">简体中文</div>
+          <div class="language-arrow">
+            <i class="fa fa-caret-up"></i>
+            <i class="fa fa-caret-down"></i>
+          </div>
+        </div>
+        <!-- 语言选择区 -->
+        <ul class="languege-choice">
+          <li>
+            <i class="fa fa-check"></i>
+            <span>简体中文</span>
+          </li>
+          <li>
+            <i class="fa"></i>
+            <span>正體中文</span>
+          </li>
+          <li>
+            <i class="fa"></i>
+            <span>English</span>
+          </li>
+        </ul>
+      </div>
+      <!-- 注册和登陆 -->
+      <div class="bar-right-register">注册</div>
+      <div class="bar-right-login">登录</div>
+    </div>
+  </div>
+</div>
+<div class="info-cover">
+  <div class="info-board">
+    <div class="info-board-title">
+      <div class="info-title-word">注册</div>
+      <div class="info-title-close">&times; </div>
+    </div>
+      <form action="" name="register" class="info-register" onsubmit="return false">
+        <input type="text" name="rusername" class="info-username">
+        <input type="text" name="rpassword" class="info-password">
+        <input type="text" name="rconfirm" class="info-password-again">
+        <input type="text" name="remail" class="info-email">
+        <input type="submit" name="rsubmit" class="info-submit" value="注册">
+      </form>
+      <form action="" name="login" class="info-login" onsubmit="return false">
+        <input type="text" name="lusername" class="info-username">
+        <input type="text" name="lpassword" class="info-password">
+        <input type="submit" name="lsubmit" class="info-submit" value="登录">
+      </form>
+  </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+<script>
+</script>
+</body>
+</html>
