@@ -1,82 +1,350 @@
-/*
-Error: Mixin basicbox is missing argument $padding.
-        on line 54 of C:\Users\asus-pc\WebstormProjects\BBS\express_modules\public\scss\index.scss, in `basicbox'
-        from line 54 of C:\Users\asus-pc\WebstormProjects\BBS\express_modules\public\scss\index.scss
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-49: }
-50: .bar-left-logo {
-51:   @include basicbox(160px, 50px, 0, 0);
-52:   line-height: 50px;
-53:   img {
-54:     @include basicbox(100%, 30px, 10px 0);
-55:   }
-56:   &:hover {
-57:     cursor: pointer;
-58:   }
-59:   &:nth-child(2), &:nth-child(3) {
+ul, li {
+  list-style-type: none;
+}
 
-Backtrace:
-C:\Users\asus-pc\WebstormProjects\BBS\express_modules\public\scss\index.scss:54:in `basicbox'
-C:\Users\asus-pc\WebstormProjects\BBS\express_modules\public\scss\index.scss:54
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:75:in `block in perform_arguments'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:67:in `zip'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:67:in `perform_arguments'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:362:in `block in visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/engine.rb:290:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:400:in `run'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
-C:/Ruby24-x64/bin/sass:22:in `load'
-C:/Ruby24-x64/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Mixin basicbox is missing argument $padding.\A         on line 54 of C:\Users\asus-pc\WebstormProjects\BBS\express_modules\public\scss\index.scss, in `basicbox'\A         from line 54 of C:\Users\asus-pc\WebstormProjects\BBS\express_modules\public\scss\index.scss\A \A 49: }\A 50: .bar-left-logo {\A 51:   @include basicbox(160px, 50px, 0, 0);\A 52:   line-height: 50px;\A 53:   img {\A 54:     @include basicbox(100%, 30px, 10px 0);\A 55:   }\A 56:   &:hover {\A 57:     cursor: pointer;\A 58:   }\A 59:   &:nth-child(2), &:nth-child(3) {"; }
+.page-head-bar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background: rgba(203, 27, 69, 0.98);
+  -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.45);
+}
+
+.page-head-bar-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.bar-left {
+  float: left;
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.bar-left:nth-last-child(-n + 2) {
+  line-height: 50px;
+  font-size: 14px;
+  color: #eaa4b5;
+}
+
+.bar-left-logo {
+  width: 160px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+.bar-left-logo img {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0;
+}
+.bar-left-logo:hover {
+  cursor: pointer;
+}
+
+.bar-left-block1:hover,
+.bar-left-block2:hover {
+  cursor: pointer;
+}
+
+.bar-right {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.bar-right:nth-last-child(-n + 2) {
+  line-height: 50px;
+  font-size: 14px;
+  color: #eaa4b5;
+}
+
+.bar-right-search-container {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar-container {
+  position: absolute;
+  width: auto;
+  height: 20px;
+  margin: 5px 0;
+  padding: 8px;
+  line-height: 20px;
+  top: 0;
+  right: 0;
+  background: #b4183d;
+  border-radius: 5px;
+}
+
+.search-input {
+  width: 150px;
+  height: 20px;
+  margin-left: 5px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  color: #eaa4b5;
+  outline: none;
+  -webkit-transition: width .2s ease;
+  transition: width .2s ease;
+}
+
+.search-input1 {
+  width: 350px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  color: #eaa4b5;
+  outline: none;
+}
+
+.bar-right-language {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.bar-right-language:hover {
+  cursor: pointer;
+}
+
+.language-default-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.language-default-bar .language-default {
+  width: 80%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.language-default-bar .language-arrow {
+  width: 15%;
+  height: 10px;
+  margin: 15px 10px;
+  padding: 0;
+  line-height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.language-choice {
+  display: none;
+  width: 150px;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
+  border-radius: 3px;
+}
+.language-choice li {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 12px;
+  color: #333;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+.language-choice li:hover {
+  cursor: pointer;
+  background: #eaa4b5;
+}
+
+.bar-right-register, .bar-right-login {
+  position: relative;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.bar-right-register:hover, .bar-right-login:hover {
+  cursor: pointer;
+}
+
+.info-cover {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(252, 250, 243, 0.75);
+}
+
+.info-board {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 7px 15px rgba(0, 0, 0, 0.35);
+  width: 375px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.info-board-title {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  background: #ffffff;
+  text-align: center;
+  color: #333333;
+}
+.info-title-close {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.info-title-close:hover {
+  cursor: pointer;
+}
+.info-title-word {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+.info-register, .info-login {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+  background: #f6f3e4;
+}
+.info-username, 
+.info-password, 
+.info-password-again, 
+.info-email,
+.info-submit  {
+  width: 80%;
+  height: 50px;
+  margin: 10px auto;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+}
+.info-username, 
+.info-password, 
+.info-password-again, 
+.info-email  {
+  background: #ffffff;
+  color: #998f66;
+}
+.info-box-style {
+  border: 2px solid #cb1b45;
+}
+.info-username input, 
+.info-password input, 
+.info-password-again input, 
+.info-email input {
+  width: 90%;
+  text-align: center;
+  color: #998f66;
+  font-size: 16px;
+  outline: none;
+  border: 0;
+}
+.info-submit {
+  background: #cb1b45;
+  color: #ffffff;
+  border: 2px solid #cb1b45;
+}
+.info-submit:hover {
+  cursor: pointer;
+}
+.info-cover, .info-board {
+  display: none;
+}
+.info-message-register,
+.info-message-login {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  color: #998f66;
+  text-align: center;
+}
+.info-message-register a,
+.info-message-login a {
+  color: #cb1b45;
+}
+.info-message-register a:hover,
+.info-message-login a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

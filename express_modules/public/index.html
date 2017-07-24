@@ -25,7 +25,7 @@
       <!-- 搜索栏 -->
       <div class="bar-right-search-container">
         <div class="search-bar-container">
-          <i class="fa fa-search fa-2x"></i>
+          <i class="fa fa-search"></i>
           <input type="text" class="search-input" placeholder="搜索" spellcheck="false">          
         </div>
       </div>
@@ -33,14 +33,14 @@
       <div class="bar-right-language">
         <!-- 默认语言和箭头图标 -->
         <div class="language-default-bar">
-          <div class="languege-default">简体中文</div>
+          <div class="language-default">简体中文</div>
           <div class="language-arrow">
             <i class="fa fa-caret-up"></i>
             <i class="fa fa-caret-down"></i>
           </div>
         </div>
         <!-- 语言选择区 -->
-        <ul class="languege-choice">
+        <ul class="language-choice">
           <li>
             <i class="fa fa-check"></i>
             <span>简体中文</span>
@@ -61,24 +61,46 @@
     </div>
   </div>
 </div>
+
+<!-- 登录注册区域-->
 <div class="info-cover">
+  <!-- 登录注册栏 -->
   <div class="info-board">
+    <!-- 标题头显示登录还是注册 -->
     <div class="info-board-title">
-      <div class="info-title-word">注册</div>
       <div class="info-title-close">&times; </div>
+      <div class="info-title-word"></div>
     </div>
-      <form action="" name="register" class="info-register" onsubmit="return false">
-        <input type="text" name="rusername" class="info-username">
-        <input type="text" name="rpassword" class="info-password">
-        <input type="text" name="rconfirm" class="info-password-again">
-        <input type="text" name="remail" class="info-email">
-        <input type="submit" name="rsubmit" class="info-submit" value="注册">
-      </form>
-      <form action="" name="login" class="info-login" onsubmit="return false">
-        <input type="text" name="lusername" class="info-username">
-        <input type="text" name="lpassword" class="info-password">
-        <input type="submit" name="lsubmit" class="info-submit" value="登录">
-      </form>
+    <!-- 注册表单 -->
+    <form action="" name="register" class="info-register">
+      <div class="info-username">
+        <input type="text" name="rusername" placeholder="用户">
+      </div>
+      <div class="info-password">
+        <input type="password" name="rpassword" placeholder="密码">
+      </div>
+      <div class="info-password-again">
+        <input type="password" name="rconfirm" placeholder="确认密码">
+      </div>
+      <div class="info-email">
+        <input type="text" name="remail" placeholder="邮箱">
+      </div>
+      <div class="info-submit">注册</div>
+    </form>
+    <!-- 登录表单 -->
+    <form action="" name="login" class="info-login">
+      <div class="info-username">
+        <input type="text" name="lusername" placeholder="用户名或邮箱">
+      </div>
+      <div class="info-password">
+        <input type="password" name="lpassword" placeholder="密码">
+      </div>
+      <div class="info-submit">登录</div>
+    </form>
+    <!-- 跳转登录界面 -->
+    <div class="info-message-register">已有账户？<a>登录</a></div>
+    <!-- 跳转注册界面 -->
+    <div class="info-message-login">还没有账户？<a>立即注册</a></div>
   </div>
 </div>
 <script src="./js/jquery.min.js"></script>

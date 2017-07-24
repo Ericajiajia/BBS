@@ -10,12 +10,23 @@ $color8: rgb(93, 172, 129);
 $color9: rgb(225, 107, 140);
 $color10: rgb(135, 135, 135);
 $color11: rgb(255, 170, 204);
-
+$font-color1: rgb(234, 164, 181);
 @mixin basicbox($width, $height, $margin, $padding) {
   width: $width;
   height: $height;
   margin: $margin;
   padding: $padding;
+}
+@mixin last($num) {
+   &:nth-last-child(-n + #{$num}) {
+    line-height: 50px;
+    font-size: 14px;
+    color: $font-color1;
+  }
+}
+@mixin flexbox {
+  display: flex;
+  justify-content: space-between;
 }
 body, html {
   @include basicbox(100%, 100%, 0, 0);
@@ -25,6 +36,7 @@ ul, li {
 }
 .page-head-bar {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   @include basicbox(100%, 50px, 0, 0);
@@ -33,32 +45,140 @@ ul, li {
 }
 .page-head-bar-container {
   @include basicbox(80%, 100%, 0 auto, 0);
-  border: 1px solid #000;
 }
 .bar-left {
   float: left;
   @include basicbox(30%, 100%, 0, 0);
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #000;
-}
-.bar-right {
-  float: right;
-  @include basicbox(60%, 100%, 0, 0);
-  border: 1px solid #000;
+  @include flexbox;
+  @include last(2);
 }
 .bar-left-logo {
   @include basicbox(160px, 50px, 0, 0);
   line-height: 50px;
   img {
-    @include basicbox(100%, 30px, 10px 0);
+    @include basicbox(100%, 30px, 10px 0, 0);
   }
   &:hover {
     cursor: pointer;
   }
-  &:nth-child(2), &:nth-child(3) {
-    @include basicbox(auto, 50px, 0, 0);
-    line-height: 50px;
+}
+.bar-left-block1:hover,
+.bar-left-block2:hover {
+  cursor: pointer;
+}
+.bar-right {
+  float: right;
+  @include flexbox;
+  @include basicbox(60%, 100%, 0, 0);
+  @include last(2);
+}
+.bar-right-search-container {
+  position: relative;
+  @include basicbox(400px, 100%, 0, 0);
+}
+.search-bar-container {
+  position: absolute;
+  @include basicbox(auto, 20px, 5px 0, 8px);
+  line-height: 20px;
+  top: 0;
+  right: 0;
+  background: $color1_hover;
+  border-radius: 5px;
+}
+@mixin searchbox {
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  color: $font-color1;
+  outline: none;
+}
+.search-input {
+  width: 150px;
+  height: 20px;
+  margin-left: 5px;
+  @include searchbox;
+  transition: width .2s ease;
+}
+.search-input1 {
+  width: 350px;
+  @include searchbox;
+}
+.bar-right-language {
+  position: relative;
+  @include basicbox(100px, 100%, 0, 0);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.language-default-bar {
+  @include flexbox;
+  .language-default {
+    @include basicbox(80%, 100%, 0, 0);
+    text-align: center;
+  }
+  .language-arrow {
+    @include basicbox(15%, 10px, 15px 10px, 0);
+    line-height: 10px;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.language-choice {
+  display: none;
+  @include basicbox(150px, auto, 0, 10px 0);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
+  border-radius: 3px;
+  li {
+    @include basicbox(auto, auto, 0, 0 20px);
+    font-size: 12px;
+    color: #333;
+    transition: background .2s ease;
+  }
+  li:hover {
+    cursor: pointer;
+    background: $font-color1;
+  }
+}
+.bar-right-register, .bar-right-login {
+  position: relative;
+  @include basicbox(auto, 100%, 0, 0);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.info-cover {
+  position: fixed;
+  z-index: 100;
+  @include basicbox(100%, 100%, 0, 0);
+  background: rgba(252, 250, 243, 0.75);
+}
+.info-board {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  border-radius: 4px;
+  box-shadow: 0 7px 15px rgba(0,0,0,0.35);
+  @include basicbox(375px, auto, 0, 0);
+  transform: translate(-50%, -50%);
+}
+.info-board-title {
+  @include basicbox(100%, 60px, 0, 0);
+  line-height: 60px;
+  background: #ffffff;
+  text-align: center;
+  color: #333333;
+  .info-title-close {
+    font: {
+      size: 12px;
+      weight: bolder;
+    }
     border: 1px solid #000;
+  }
+  .info-title-word {
+    font-size: 18px;
   }
 }
