@@ -1,0 +1,210 @@
+/*页面主体区域*/
+.body-container {
+  width: 1100px;
+  height: auto;
+  margin: 90px auto 0;
+}
+/*页面左侧分类区*/
+.body-left-container {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin: 0;
+  padding: 10px 0;
+}
+/*发布贴文按钮*/
+.left-add-button {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px;
+  background: #cb1b45;
+  color: #ffffff;
+}
+.left-add-button:hover {
+  background: #b4183d;
+  cursor: pointer;
+}
+/*头部链接*/
+.left-head-sorts {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  padding: 0;
+}
+.left-head-sorts li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+}
+.head-block1, .head-block2 {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+}
+.head-block2 {
+  color: #998f66;
+}
+.head-block1, .head-block2:hover {
+  color: #cb1b45;
+}
+.head-block1 span, .head-block2 span {
+  margin-left: 10px;
+}
+/*分类链接*/
+.left-datail-sorts {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 0;
+  font-size: 14px;
+}
+.left-datail-sorts li {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.datail-block {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+}
+.detail-block-color1,
+.detail-block-color2,
+.detail-block-color3,
+.detail-block-color4,
+.detail-block-color5,
+.detail-block-color6,
+.detail-block-color7,
+.detail-block-color8,
+.detail-block-color9,
+.detail-block-color10,
+.detail-block-color11 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border-radius: 4px;
+  vertical-align: -3px;
+}
+.block-color1 {
+  color: rgb(203, 27, 69);
+}
+.detail-block-color1 {
+  background: rgb(203, 27, 69);
+}
+.block-color2 {
+  color: rgb(231, 103, 46);
+}
+.detail-block-color2 {
+  background: rgb(231, 103, 46);
+}
+.block-color3 {
+  color: rgb(88, 178, 220);
+}
+.detail-block-color3 {
+  background: rgb(88, 178, 220);
+}
+.block-color4 {
+  color: rgb(102, 186, 183);
+}
+.detail-block-color4 {
+  background: rgb(102, 186, 183);
+}
+.block-color5 {
+  color: rgb(241, 124, 103);
+}
+.detail-block-color5 {
+  background: rgb(241, 124, 103);
+}
+.block-color6 {
+  color: rgb(202, 122, 44);
+}
+.detail-block-color6 {
+  background: rgb(202, 122, 44);
+}
+.block-color7 {
+  color: rgb(134, 193, 102);
+}
+.detail-block-color7 {
+  background: rgb(134, 193, 102);
+}
+.block-color8 {
+  color: rgb(93, 172, 129);
+}
+.detail-block-color8 {
+  background: rgb(93, 172, 129);
+}
+.block-color9 {
+  color: rgb(225, 107, 140);
+}
+.detail-block-color9 {
+  background: rgb(225, 107, 140);
+}
+.block-color10 {
+  color: rgb(135, 135, 135);
+}
+.detail-block-color10 {
+  background: rgb(135, 135, 135);
+}
+.block-color11 {
+  color: rgb(255, 170, 204);
+}
+.detail-block-color11 {
+  background: rgb(255, 170, 204);
+}
+.datail-block:hover {
+  cursor: pointer;
+  color: #cb1b45;
+}
+.detail-more {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding-left: 20px;
+  color: #998f66;
+}
+.detail-more:hover {
+  color: #cb1b45;
+}
+.detail-block-all1,
+.detail-block-all2,
+.detail-block-all3,
+.detail-block-all4 {
+  display: none;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.detail-block-all1 li,
+.detail-block-all2 li,
+.detail-block-all3 li,
+.detail-block-all4 li {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 0 0 40px;
+  color: #998f66;
+}
+.detail-block-all1 li:hover,
+.detail-block-all2 li:hover,
+.detail-block-all3 li:hover,
+.detail-block-all4 li:hover {
+  cursor: pointer;
+  color: #cb1b45;
+}
+.detail-img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  cursor: pointer;
+}

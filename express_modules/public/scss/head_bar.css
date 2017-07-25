@@ -8,31 +8,30 @@ body, html {
 ul, li {
   list-style-type: none;
 }
-
+/*头部悬浮栏*/
 .page-head-bar {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
   margin: 0;
   padding: 0;
-  background: rgba(203, 27, 69, 0.98);
+  background: #cc1f48;
   -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.45);
 }
-
 .page-head-bar-container {
-  width: 80%;
+  width: 1100px;
   height: 100%;
   margin: 0 auto;
   padding: 0;
 }
-
+/*左侧链接区*/
 .bar-left {
   float: left;
-  width: 30%;
+  width: 300px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -48,7 +47,7 @@ ul, li {
   font-size: 14px;
   color: #eaa4b5;
 }
-
+/*网页logo*/
 .bar-left-logo {
   width: 160px;
   height: 50px;
@@ -70,7 +69,7 @@ ul, li {
 .bar-left-block2:hover {
   cursor: pointer;
 }
-
+/*右侧链接区*/
 .bar-right {
   float: right;
   display: -webkit-box;
@@ -79,7 +78,7 @@ ul, li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 60%;
+  width: 640px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -89,7 +88,7 @@ ul, li {
   font-size: 14px;
   color: #eaa4b5;
 }
-
+/*搜索栏*/
 .bar-right-search-container {
   position: relative;
   width: 400px;
@@ -97,12 +96,11 @@ ul, li {
   margin: 0;
   padding: 0;
 }
-
 .search-bar-container {
   position: absolute;
   width: auto;
   height: 20px;
-  margin: 5px 0;
+  margin: 8px 0;
   padding: 8px;
   line-height: 20px;
   top: 0;
@@ -110,7 +108,16 @@ ul, li {
   background: #b4183d;
   border-radius: 5px;
 }
-
+/*给placeholder的字体设置颜色*/
+.search-bar-container input::-webkit-input-placeholder {
+  color: #eaa4b5;
+}
+.search-bar-container input::-moz-input-placeholder {
+  color: #eaa4b5;
+}
+.search-bar-container input::-ms-input-placeholder {
+  color: #eaa4b5;
+}
 .search-input {
   width: 150px;
   height: 20px;
@@ -120,10 +127,10 @@ ul, li {
   font-size: 14px;
   color: #eaa4b5;
   outline: none;
-  -webkit-transition: width .2s ease;
-  transition: width .2s ease;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
 }
-
+/*搜索栏扩展样式*/
 .search-input1 {
   width: 350px;
   border: 0;
@@ -131,8 +138,10 @@ ul, li {
   font-size: 14px;
   color: #eaa4b5;
   outline: none;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
 }
-
+/*语言区*/
 .bar-right-language {
   position: relative;
   width: 100px;
@@ -143,7 +152,7 @@ ul, li {
 .bar-right-language:hover {
   cursor: pointer;
 }
-
+/*默认语言和箭头图标*/
 .language-default-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,14 +161,14 @@ ul, li {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.language-default-bar .language-default {
+.language-default {
   width: 80%;
   height: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-.language-default-bar .language-arrow {
+.language-arrow {
   width: 15%;
   height: 10px;
   margin: 15px 10px;
@@ -179,13 +188,14 @@ ul, li {
       -ms-flex-align: center;
           align-items: center;
 }
-
+/*语言选择区*/
 .language-choice {
   display: none;
   width: 150px;
   height: auto;
   margin: 0;
   padding: 10px 0;
+  background: #ffffff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 6px;
   border-radius: 3px;
@@ -204,7 +214,7 @@ ul, li {
   cursor: pointer;
   background: #eaa4b5;
 }
-
+/*注册和登录链接*/
 .bar-right-register, .bar-right-login {
   position: relative;
   width: auto;
@@ -215,17 +225,19 @@ ul, li {
 .bar-right-register:hover, .bar-right-login:hover {
   cursor: pointer;
 }
-
+/*登录注册区域背景*/
 .info-cover {
   position: fixed;
   z-index: 100;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   background: rgba(252, 250, 243, 0.75);
 }
-
+/*登录注册栏*/
 .info-board {
   position: fixed;
   top: 50%;
@@ -241,7 +253,7 @@ ul, li {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-
+/*标题头显示登录还是注册*/
 .info-board-title {
   position: relative;
   top: 0;
@@ -275,6 +287,7 @@ ul, li {
   height: 100%;
   font-size: 18px;
 }
+/*注册表单*/
 .info-register, .info-login {
   position: relative;
   left: 0;
@@ -283,6 +296,18 @@ ul, li {
   margin: 0;
   padding: 10px 0;
   background: #f6f3e4;
+}
+.info-register input::-webkit-input-placeholder,
+.info-login input::-webkit-input-placeholder {
+  color: #998f66;
+}
+.info-register input::-moz-input-placeholder,
+.info-login input::-moz-input-placeholder {
+  color: #998f66;
+}
+.info-register input::-ms-input-placeholder,
+.info-login input::-ms-input-placeholder {
+  color: #998f66;
 }
 .info-username, 
 .info-password, 
@@ -326,9 +351,11 @@ ul, li {
 .info-submit:hover {
   cursor: pointer;
 }
+/*隐藏注册登录区*/
 .info-cover, .info-board {
   display: none;
 }
+/*注册登录跳转区域文字*/
 .info-message-register,
 .info-message-login {
   position: relative;

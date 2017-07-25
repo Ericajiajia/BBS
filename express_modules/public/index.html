@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>BBS</title>
-    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="stylesheet" href="./scss/head_bar.css">
+    <link rel="stylesheet" href="./scss/body_left_bar.css">
+    <link rel="stylesheet" href="./scss/body_right_bar.css">
     <link rel="stylesheet" href="./font/css/font-awesome.css">
 </head>
 <!-- GitGutter插件很卡，已卸载 -->
@@ -26,7 +28,7 @@
       <div class="bar-right-search-container">
         <div class="search-bar-container">
           <i class="fa fa-search"></i>
-          <input type="text" class="search-input" placeholder="搜索" spellcheck="false">          
+          <input type="text" class="search-input" placeholder="搜索" spellcheck="false">
         </div>
       </div>
       <!-- 语言区 -->
@@ -103,6 +105,177 @@
     <div class="info-message-login">还没有账户？<a>立即注册</a></div>
   </div>
 </div>
+
+<!-- 页面主体区域-->
+<div class="body-container">
+  <!-- 页面左侧分类区 -->
+  <div class="body-left-container">
+    <!-- 发布贴文按钮 -->
+    <div class="left-add-button">添加贴文</div>
+    <!-- 头部链接 -->
+    <ul class="left-head-sorts">
+      <li>
+        <a href="" class="head-block1">
+          <i class="fa fa-comments-o"></i>
+          <span>全部贴文</span>
+        </a>
+      </li>
+      <li>
+        <a href="" class="head-block2">
+          <i class="fa fa-th-large"></i>
+          <span>节点</span>
+        </a>
+      </li>
+    </ul>
+    <!-- 分类链接 -->
+    <ul class="left-datail-sorts">
+      <li>
+        <a href="" class="datail-block block-color1">
+          <span class="detail-block-color1"></span>Vivaldi
+        </a>
+        <ul class="detail-block-all1">
+          <li>Snapshot</li>
+          <li>正式版</li>
+          <li>老谭有话说</li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color2">
+          <span class="detail-block-color2"></span>Fluarum
+        </a>
+        <ul class="detail-block-all2">
+          <li>hack</li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color3">
+          <span class="detail-block-color3"></span>浏览器
+        </a>
+        <ul class="detail-block-all3">
+          <li>Opera</li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color4">
+          <span class="detail-block-color4"></span>水塘
+        </a>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color5">
+          <span class="detail-block-color5"></span>分享
+        </a>
+        <ul class="detail-block-all4">
+          <li>图</li>
+          <li>书</li>
+          <li>影</li>
+          <li>音</li>
+        </ul>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color6">
+          <span class="detail-block-color6"></span>求助
+        </a>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color7">
+          <span class="detail-block-color7"></span>硬体
+        </a>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color8">
+          <span class="detail-block-color8"></span>软体
+        </a>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color9">
+          <span class="detail-block-color9"></span>版务
+        </a>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color10">
+          <span class="detail-block-color10"></span>沙盒
+        </a>
+      </li>
+      <li>
+        <a href="" class="datail-block block-color11">
+          <span class="detail-block-color11"></span>Csineneo
+        </a>
+      </li>
+      <div class="detail-more">更多节点...</div>
+    </ul>
+    <img src="img/body_left.jpg" class="detail-img">
+  </div>
+  <!-- 页面右侧分类区 -->
+  <div class="body-right-container">
+    <div class="right-top-bar">
+      <!-- 帖子排序选择 -->
+      <div class="right-choices-container">
+        <select class="right-choices">
+          <option value="latest">最后回复</option>
+          <option value="top">最热贴文</option>
+          <option value="newest">最新贴文</option>
+          <option value="oldest">最旧贴文</option>
+        </select>
+        <div class="right-choices-arrow">
+          <i class="fa fa-caret-up"></i>
+          <i class="fa fa-caret-down"></i>
+        </div>
+      </div>
+      <!-- 刷新 -->
+      <div class="right-update">
+        <i class="fa fa-refresh"></i>
+      </div>
+    </div>
+    <!-- 帖子展现区域 -->
+    <div class="right-posts-container">
+      <ul class="posts-area">
+        <li>
+          <a href="#" class="post-img">
+            <img src="img/head_panda.jpg" alt="">
+          </a>
+          <div class="post-comment-area">
+            <div class="comment-content">我认为这个电影不好不好不好！</div>
+            <div class="comment-time">发表于
+              <span>2017年</span>
+              <span>9月</span>
+              <span>12日</span>
+            </div>
+            <div class="comment-tag"></div>
+          </div>
+          <div class="post-more">
+            <a class="post-discuss">评论</a>
+            <a class="post-favor">
+              <i class="fa fa-heart"></i>
+              <span>3</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="post-img">
+            <img src="img/head_shark.jpg" alt="">
+          </a>
+          <div class="post-comment-area">
+            <div class="comment-content">我认为这个电影不好不好不好！</div>
+            <div class="comment-time">发表于
+              <span>2017年</span>
+              <span>9月</span>
+              <span>12日</span>
+            </div>
+            <div class="comment-tag"></div>
+          </div>
+          <div class="post-more">
+            <a href="" class="post-discuss">评论</a>
+            <a href="" class="post-favor">
+              <i class="fa fa-heart"></i>
+              <span>3</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <script src="./js/jquery.min.js"></script>
 <script src="./js/index.js"></script>
 <script>

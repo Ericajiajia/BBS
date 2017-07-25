@@ -89,9 +89,58 @@ $('.info-submit')[0].addEventListener('click', function () {
       if (data.result === 0) {
         alert('成功')
         infoClear()
-      } else if (data.result === 1) {
-        alert('')
+      } else {
+        alert('注册出错，请重试！')
       }
     }
   })
+})
+$('.info-submit')[1].addEventListener('click', function() {
+  $.ajax({
+    type: 'POST',
+    url: '/login',
+    dataType: 'json',
+    'contentType': 'application/json',
+    data: JSON.stringify(
+      {
+        'username': login.lusername.value,
+        'password': login.lpassword.value
+      }
+    ),
+    success: function (data) {
+      if (data.result === 0) {
+        alert('成功')
+        infoClear()
+      } else {
+        alert('您尚未注册，请注册！')
+      }
+    }
+  })
+})
+// 给搜索栏设置样式变化
+$('.search-bar-container input')[0].addEventListener('focus', function () {
+  $('.search-bar-container input')[0].className = 'search-input1'
+})
+$('.search-bar-container input')[0].addEventListener('blur', function () {
+  $('.search-bar-container input')[0].className = 'search-input'
+})
+// 给语言选择区设置样式变化
+$('.language-default-bar')[0].addEventListener('click', function (e) {
+  if (e.target.className === 'language-default-bar' || e.target.parentNode.className === 'language-default-bar' || e.target.parentNode.parentNode.className === 'language-default-bar') {
+    $('.language-choice')[0].style.display = 'block'
+  }
+})
+$('body')[0].addEventListener('click', function (e) {
+  if(!(e.target.className === 'language-default-bar' || e.target.parentNode.className === 'language-default-bar' || e.target.parentNode.parentNode.className === 'language-default-bar')) {
+    $('.language-choice')[0].style.display = 'none'
+  }
+})
+$('.language-choice li').on('click', function (e) {
+  $('.language-default')[0].innerHTML = e.target.innerHTML
+  for (let _i = 0; _i < 3; _i ++) {
+    $('.language-choice li i')[_i].className = 'fa'
+    if($('.language-choice li span')[_i].innerHTML === e.target.innerHTML) {
+      $('.language-choice li i')[_i].className = 'fa fa-check'
+    }
+  }
 })
