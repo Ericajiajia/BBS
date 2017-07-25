@@ -82,7 +82,8 @@ $('.info-submit')[0].addEventListener('click', function () {
       {
         'username': register.rusername.value,
         'password': register.rpassword.value,
-        'email': register.remail.value
+        'email': register.remail.value,
+        'time': new Date()
       }
     ),
     success: function (data) {

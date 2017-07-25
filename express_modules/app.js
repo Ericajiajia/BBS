@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // 引用数据库模块和接口
 var MongoClient = require('mongodb').MongoClient
 var DB_CONN_STR = 'mongodb://localhost:27017/Collections'
-var data, resind
+var data
 
 // 对数据库执行插入数据
 var insertData = function(db, data, callback) {  
@@ -51,8 +51,6 @@ var selectData = function(db, data, callback) {
   //连接到表  
   var collection = db.collection('example')
   //查询数据
-  resind = collection.find(data).topology.id
-  console.log(resind)
   collection.find(data).toArray(function(err, result, resp) {
     if(err)
     {
@@ -72,9 +70,9 @@ app.post('/register', function(req, res, next) {
       })
   })
   // request是后台从前端接受的数据，必须搭配解析器
-  console.log(resind)
+  console.log(req.body)
   // res是后台传给前端的返回对象
-  res.json({result: resind})
+  res.json({result: 0})
 })
 app.post('/login', function(req, res, next) { 
   MongoClient.connect(DB_CONN_STR, function(err, db) {
@@ -84,11 +82,8 @@ app.post('/login', function(req, res, next) {
           db.close()
       });
   })
-  // request是后台从前端接受的数据，必须搭配解析器
-  console.log(req.body)
   // res是后台传给前端的返回对象
   res.json({result: 0})
-  res.send(1)
 })
 // 搭建服务器，打开前端页面
 app.get('/public/*', function(req, res, next) {
