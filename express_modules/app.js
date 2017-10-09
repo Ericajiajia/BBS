@@ -27,88 +27,85 @@ var app = express()
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
-// 引用数据库模块和接口
-var MongoClient = require('mongodb').MongoClient
-var DB_CONN_STR = 'mongodb://localhost:27017/Collections'
-var data
 
-// 对数据库执行插入数据
-var insertData = function(db, data, callback) {  
-    //连接到数据库example
-    var collection = db.collection('example')
-    //插入数据
-    collection.insert(data, function (err, result) { 
-        if(err)
-        {
-            console.log('Error:'+ err)
-            return
-        }     
-        callback(result)
-    })
-}
-// 对数据库执行查询数据
-var selectData = function(db, data, callback) {  
-  //连接到表  
-  var collection = db.collection('example')
-  //查询数据
-  collection.find(data).toArray(function(err, result, resp) {
-    if(err)
-    {
-      console.log('Error:'+ err)
-      return
-    }     
-    callback(result)
-  })
-}
+// // 引用mongoose，打开一个到测试库连接
+// var mongoose = require('mongoose')
+// mongoose.Promise = global.Promise
+// mongoose.connect('mongodb://localhost/Collections', { useMongoClient: true})
+// //测试连接是否正确
+// var db = mongoose.connection
+// db.on('error', console.error.bind(console, 'connection error:'))
+// db.once('open', function callback () {
+//   console.log('success')
+// })
+// var personSchema = mongoose.Schema({
+//   username: String,
+//   password: String,
+//   email: String,
+//   time: Object
+// })
+// var Person = mongoose.model('Person', personSchema)
+// var person1 = new Person({
+//   username: 'jia',
+//   password: '222',
+//   time: new Date()
+// })
+// person1.save(function (person1) {
+// }).then(function (value) {
+//   console.log(value)
+// }).catch(function (err) {
+//   console.log(err)
+// })
+// Person.find({username: 'jia'}, function (doc){}).then(function (value) {
+//   console.log(1, value, 'success')
+// }).catch(function (err) {console.log(err)})
+
+
+
 // 注册页面传递新产生的数据
-app.post('/register', function(req, res, next) { 
-  MongoClient.connect(DB_CONN_STR, function(err, db) {
-      console.log("连接成功！")
-      insertData(db, req.body, function (result) {
-          console.log(result)
-          db.close()
-      })
-  })
+app.post('/register', function(req, res, next) {
   // request是后台从前端接受的数据，必须搭配解析器
   console.log(req.body)
   // res是后台传给前端的返回对象
   res.json({result: 0})
 })
-app.post('/login', function(req, res, next) { 
-  MongoClient.connect(DB_CONN_STR, function(err, db) {
-      console.log("连接成功！")
-      selectData(db, req.body, function(result) {
-          console.log(result)
-          db.close()
-      });
-  })
+
+
+//登录页面的后台
+app.post('/login', function(req, res, next) {
   // res是后台传给前端的返回对象
   res.json({result: 0})
 })
 // 搭建服务器，打开前端页面
-app.get('/public/*', function(req, res, next) {
-    // 使用默认参数，除了根路径要改变
-    var options = {
-        root: './public/',
-        dotfile: 'deny',
-        headers: {
-            'x-timestamp': Date.now(),
-            'x-sent': true
-        }
-    };
-    // 由于拿到的数据是个数组（前面用了*匹配），从index.html开始，所以filename取第一个
-    var fileName = req.params[0]
-    // 通过sendFile()函数取到主页面的内容并展现出来
-    res.sendFile(fileName, options, function(err) {
-        if (err) {
-            console.log(err);
-            res.status(err.status).end()
-        }
-        else {
-            console.log('sent', fileName)
-        }
-    })
+// 简便方法
+app.use(express.static('public'));
+app.get('/index.html', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.html" );
 })
+//复杂方法
+//  app.get('/public/*', function(req, res, next) {
+//     // 使用默认参数，除了根路径要改变
+//     var options = {
+//         root: './public/',
+//         dotfile: 'deny',
+//         headers: {
+//             'x-timestamp': Date.now(),
+//             'x-sent': true
+//         }
+//     };
+//     // 由于拿到的数据是个数组（前面用了*匹配），从index.html开始，所以filename取第一个
+//     var fileName = req.params[0]
+//     // 通过sendFile()函数取到主页面的内容并展现出来
+//     res.sendFile(fileName, options, function(err) {
+//         if (err) {
+//             console.log(err);
+//             res.status(err.status).end()
+//         }
+//         else {
+//             console.log('sent', fileName)
+//         }
+//     })
+// })
 // 端口监听
 app.listen(3000, function () {
   console.log('Open successfully!')
